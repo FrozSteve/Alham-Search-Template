@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alham Search Template</title>
+
+  <!-- Google Programmable Search (replace cx if needed) -->
+  <script async src="https://cse.google.com/cse.js?cx=f79d47f5778144955"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background: #111;
+      color: #eee;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin: 0 0 10px;
+    }
+
+    header p {
+      font-size: 1rem;
+      color: #aaa;
+      margin: 0;
+    }
+
+    main {
+      flex: 1;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      width: 100%;
+    }
+
+    /* Dark mode overrides */
+    .gsc-control-cse {
+      background-color: #111 !important;
+      border: none !important;
+      color: #eee !important;
+    }
+    .gsc-result {
+      background: #1a1a1a !important;
+      border-radius: 8px;
+      padding: 12px !important;
+      margin-bottom: 10px !important;
+    }
+    .gsc-result a {
+      color: #4dabf7 !important;
+    }
+    .gs-snippet {
+      color: #ddd !important;
+    }
+    .gsc-input-box {
+      background: #222 !important;
+      border-radius: 6px !important;
+      border: 1px solid #333 !important;
+    }
+    input.gsc-input {
+      background: #222 !important;
+      color: #eee !important;
+    }
+    .gsc-search-button-v2 {
+      background: #4dabf7 !important;
+      border-radius: 6px !important;
+    }
+
+    /* Watermark in bottom-right corner */
+    .watermark {
+      position: fixed;
+      bottom: 10px;
+      right: 15px;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: none;
+      animation: pulse 3s infinite;
+      z-index: 1000;
+    }
+    .watermark:hover {
+      color: #4dabf7;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.4; transform: scale(1); }
+      50% { opacity: 0.9; transform: scale(1.05); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1> Alham</h1>
+    <p>Powered by Google</p>
+  </header>
+
+  <main>
+    <!-- Search box only -->
+    <div class="gcse-searchbox-only"></div>
+    <!-- Results area -->
+    <div class="gcse-searchresults-only"></div>
+  </main>
+
+  <!-- Clickable Watermark -->
+  <a href="https://example.com" target="_blank" class="watermark">© My Search Engine</a>
+</body>
+</html>
